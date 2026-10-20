@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/ticketops}
+        username: ${POSTGRES_USER:ticketops}
+        password: ${POSTGRES_PASSWORD:ticketops_dev}
+    jpa:
+        open-in-view: false
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health,info
